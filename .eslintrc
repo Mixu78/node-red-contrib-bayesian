@@ -1,0 +1,70 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowTernary": true
+      }
+    ],
+    "no-console": "off",
+    "no-confusing-arrow": "off",
+    "no-else-return": "off",
+    "no-return-assign": [
+      2,
+      "except-parens"
+    ],
+    "no-underscore-dangle": "off",
+    "jest/no-focused-tests": 2,
+    "jest/no-identical-title": 2,
+    "camelcase": "off",
+    "prefer-arrow-callback": [
+      "error",
+      {
+        "allowNamedFunctions": true
+      }
+    ],
+    "class-methods-use-this": "off",
+    "no-restricted-syntax": "off",
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "import/no-extraneous-dependencies": "off",
+    "arrow-body-style": "off",
+    "no-nested-ternary": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "src/**/*.d.ts"
+      ],
+      "rules": {
+        "@typescript-eslint/triple-slash-reference": "off"
+      }
+    }
+  ]
+}

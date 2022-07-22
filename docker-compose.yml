@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  node-red:
+    image: nodered/node-red
+    volumes:
+      - ./node-red:/data
+    ports:
+      - "8080:1880"
