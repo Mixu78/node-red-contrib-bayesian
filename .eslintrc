@@ -14,7 +14,7 @@
   },
   "rules": {
     "@typescript-eslint/no-unused-vars": [
-      "error",
+      "warn",
       {
         "argsIgnorePattern": "^_",
         "varsIgnorePattern": "^_",
@@ -23,7 +23,7 @@
       }
     ],
     "no-unused-expressions": [
-      "error",
+      "warn",
       {
         "allowTernary": true
       }
@@ -32,12 +32,10 @@
     "no-confusing-arrow": "off",
     "no-else-return": "off",
     "no-return-assign": [
-      2,
+      "warn",
       "except-parens"
     ],
     "no-underscore-dangle": "off",
-    "jest/no-focused-tests": 2,
-    "jest/no-identical-title": 2,
     "camelcase": "off",
     "prefer-arrow-callback": [
       "error",
