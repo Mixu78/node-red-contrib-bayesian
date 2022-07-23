@@ -2,6 +2,7 @@
 .vscode
 yarn-debug.log*
 yarn-error.log*
-node_modules/
 *.tsbuildinfo
-dist
+node_modules/
+dist/
+node-red/
