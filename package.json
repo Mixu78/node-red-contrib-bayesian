@@ -1,7 +1,14 @@
 {
   "name": "node-red-contrib-bayesian",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A bayesian binary sensor node for Node-RED, similar to the one from Home Assistant",
+  "keywords": [
+    "node-red"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mixu78/node-red-contrib-bayesian.git"
+  },
   "scripts": {
     "add-node": "node ./utils/add-node.js",
     "copy": "copyfiles -u 2 \"./src/nodes/**/*.{png,svg}\" \"./dist/nodes/\"",
@@ -14,15 +21,19 @@
     "lint": "prettier --ignore-path .eslintignore --check '**/*.{js,ts,md}'; eslint --ext .js,.ts .",
     "lint:fix": "prettier --ignore-path .eslintignore --write '**/*.{js,ts,md}'; eslint --ext .js,.ts . --fix",
     "nr-start": "docker-compose up -d",
-    "nr-restart": "npm pack --pack-destination ./node-red && cd ./node-red && npm i node-red-contrib-bayesian-1.0.0.tgz && cd .. && docker-compose restart",
+    "nr-restart": "npm pack --pack-destination ./node-red && cd ./node-red && npm i --no-save node-red-contrib-bayesian-1.0.1.tgz && cd .. && docker-compose restart",
     "nr-stop": "docker-compose down"
   },
   "author": "Mixu78",
   "license": "GPL-3.0-or-later",
   "node-red": {
+    "version": ">=3.0.0",
     "nodes": {
       "bayesian": "./dist/nodes/bayesian/bayesian.js"
     }
+  },
+  "engines": {
+    "node": ">=16.16.0"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.0.0",
@@ -43,6 +54,7 @@
     "glob": "^7.1.6",
     "mustache": "^4.0.1",
     "node-red": "^3.0.1",
+    "node-red-dev": "^0.1.5",
     "onchange": "^7.0.2",
     "prettier": "^2.2.1",
     "rollup": "^2.23.0",
